@@ -163,6 +163,14 @@ View Previously Generated Summaries
 
 ![Capstone Scope](screenshots/history-page.png)
 
+### Test App
+
+![test app](screenshots/test-app.png)
+
+### Test Passing
+
+![Test Passing](screenshots/tests-passing.png)
+
 ---
 
 ## Live Demo
