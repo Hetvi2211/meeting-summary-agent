@@ -50,7 +50,11 @@ Transcript:
             response = model.generate_content(prompt)
             summary = response.text
 
-            save_to_db(summary)
+            # Save to SQLite (works locally)
+            try:
+                save_to_db(summary)
+            except:
+                pass
 
         except Exception as e:
             summary = f"Error: {str(e)}"
@@ -65,12 +69,24 @@ Transcript:
 @app.route("/history")
 def history():
 
-    summaries = get_all_summaries()
+    try:
+        summaries = get_all_summaries()
 
-    return render_template(
-        "history.html",
-        summaries=summaries
-    )
+        return render_template(
+            "history.html",
+            summaries=summaries
+        )
+
+    except Exception:
+        return """
+        <h2>Summary History</h2>
+        <p>
+        History feature is available in the local version using SQLite.
+        Vercel deployments do not support persistent SQLite storage.
+        </p>
+        <br>
+        <a href="/">← Back Home</a>
+        """
 
 
 if __name__ == "__main__":
