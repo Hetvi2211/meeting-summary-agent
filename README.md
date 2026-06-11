@@ -96,15 +96,27 @@ The meeting focused on the upcoming dashboard launch scheduled for next week. Ba
 
 ### Meeting agent
 
-![Meeting agent](meeting-summary-agent/screenshots/meeting-agent-demo.png)
+![Meeting agent](screenshots/meeting-agent-demo.png)
 
 ### Saved output
 
-![Saved output](meeting-summary-agent/screenshots/saved-output.png)
+![Saved output](screenshots/saved-output.png)
 
 ### Database Records
 
-![Database](meeting-summary-agent/screenshots/db-meeting-summaries.png)
+![Database](screenshots/db-meeting-summaries.png)
+
+### Live Demo
+
+![live demo](screenshots/live-deploy1.png)
+
+### Meeting Summary
+
+![live demo](screenshots/metting-summary-output.png)
+
+### Github Actions Success
+
+![Github Actions Success](screenshots/github-actions-success.png)
 
 ---
 
