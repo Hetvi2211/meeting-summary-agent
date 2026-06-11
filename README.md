@@ -159,6 +159,10 @@ View Previously Generated Summaries
 
 ![Capstone Scope](screenshots/capstone_scope.png)
 
+### History page
+
+![Capstone Scope](screenshots/history-page.png)
+
 ---
 
 ## Live Demo
@@ -225,6 +229,35 @@ python view_db.py
 
 ---
 
+# Day 21 - Capstone WIP
+
+## Feature
+
+Meeting Summary History
+
+## Progress Completed
+
+- Added SQLite summary storage
+- Added get_all_summaries() function
+- Created /history route
+- Created history.html page
+- Added navigation to history page
+- Tested locally
+
+## Current Status
+
+Work In Progress
+
+## Known Limitation
+
+SQLite works locally.
+
+Vercel serverless deployment does not provide persistent storage for SQLite databases.
+
+Future version will migrate history storage to PostgreSQL or Supabase.
+
+
+---
 ## Learning Outcomes
 
 * Built a custom AI agent without workflow automation tools.
