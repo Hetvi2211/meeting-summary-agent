@@ -73,6 +73,26 @@ Stores generated summaries in:
 
 ---
 
+## Architecture Diagram
+
+User
+  ↓
+Flask Web App
+  ↓
+Gemini API
+  ↓
+Generated Summary
+  ↓
+Download TXT
+
+Local Version:
+Summary → SQLite Database
+
+Vercel Version:
+Summary → TXT Export
+
+---
+
 ## Sample Output
 
 ### Meeting Summary
@@ -154,6 +174,10 @@ View Previously Generated Summaries
 ### History 
 
 ![History Button](screenshots/history.png)
+
+### Download Feature
+
+![Download Feature](screenshots/download-feature.png)
 
 ### Capstone Scope
 
