@@ -64,13 +64,16 @@ Transcript:
 
 @app.route("/history")
 def history():
+    try:
+        summaries = get_all_summaries()
 
-    summaries = get_all_summaries()
+        return render_template(
+            "history.html",
+            summaries=summaries
+        )
 
-    return render_template(
-        "history.html",
-        summaries=summaries
-    )
+    except Exception as e:
+        return f"History Error: {str(e)}"
 
 
 if __name__ == "__main__":
