@@ -795,19 +795,20 @@
     </div>
 
     <div class="card-body">
-      <form id="summaryForm" method="POST" action="/summarize">
+        <form id="summaryForm" method="POST" action="/">
 
-        <div class="ta-wrap">
-          <div class="ta-glow" aria-hidden="true"></div>
-          <textarea
-            id="transcript"
-            name="transcript"
-            rows="12"
-            maxlength="50000"
-            placeholder="Paste your meeting transcript here…&#10;&#10;e.g. [10:00] Alice: Let's align on Q3 priorities…"
-            aria-label="Meeting transcript"
-            required
-          ></textarea>
+  <div class="ta-wrap">
+    <div class="ta-glow" aria-hidden="true"></div>
+    <textarea
+      id="transcript"
+      name="transcript"
+      rows="12"
+      maxlength="50000"
+      placeholder="Paste your meeting transcript here…&#10;&#10;e.g. [10:00] Alice: Let's align on Q3 priorities…"
+      aria-label="Meeting transcript"
+      required
+    >{{ transcript }}</textarea>
+  </div>
         </div>
 
         <div class="meta-row">
