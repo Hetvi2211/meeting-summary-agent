@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summary History</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            max-width:1000px;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            border:1px solid #ddd;
+            padding:15px;
+            margin-bottom:20px;
+            border-radius:10px;
+        }
+
+        pre{
+            white-space:pre-wrap;
+        }
+
+        a{
+            text-decoration:none;
+            padding:10px 15px;
+            background:#2563eb;
+            color:white;
+            border-radius:8px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Meeting Summary History</h1>
+
+<a href="/">← Back to Home</a>
+
+<br><br>
+
+{% for item in summaries %}
+
+<div class="card">
+
+    <h3>Summary #{{ item[0] }}</h3>
+
+    <pre>{{ item[1] }}</pre>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>

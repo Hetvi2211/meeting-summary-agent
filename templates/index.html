@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
+  
   <style>
   /* ═══════════════════════════════════════════
      DESIGN TOKENS — light / dark via data-theme
@@ -503,6 +503,21 @@
   .ske-line:nth-child(3) { width: 73%; }
   @keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
 
+  .history-btn{
+  text-decoration:none;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#2563eb;
+  color:white;
+  font-weight:600;
+  margin-right:12px;
+  transition:0.3s;
+}
+
+.history-btn:hover{
+  opacity:0.9;
+}
+
   /* ═══════════════════════════════════════════
      EMPTY STATE
   ═══════════════════════════════════════════ */
@@ -668,6 +683,9 @@
     <span class="header-sep"></span>
     <span class="header-sub">AI-powered meeting intelligence</span>
     <span class="header-spacer"></span>
+    <a href="/history" class="history-btn">
+  📜 History
+</a>
     <div class="status-pill">
       <span class="status-dot"></span>Gemini AI
     </div>

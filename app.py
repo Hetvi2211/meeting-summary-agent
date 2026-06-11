@@ -3,6 +3,8 @@ from flask import Flask, request, render_template
 from dotenv import load_dotenv
 import google.generativeai as genai
 
+from database import save_to_db, get_all_summaries
+
 # Load environment variables
 load_dotenv()
 
@@ -17,12 +19,15 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 # Flask App
 app = Flask(__name__)
 
+
 @app.route("/", methods=["GET", "POST"])
 def home():
+
     summary = ""
     transcript = ""
 
     if request.method == "POST":
+
         transcript = request.form.get("transcript", "")
 
         prompt = f"""
@@ -45,6 +50,8 @@ Transcript:
             response = model.generate_content(prompt)
             summary = response.text
 
+            save_to_db(summary)
+
         except Exception as e:
             summary = f"Error: {str(e)}"
 
@@ -53,6 +60,18 @@ Transcript:
         summary=summary,
         transcript=transcript
     )
+
+
+@app.route("/history")
+def history():
+
+    summaries = get_all_summaries()
+
+    return render_template(
+        "history.html",
+        summaries=summaries
+    )
+
 
 if __name__ == "__main__":
     app.run(
