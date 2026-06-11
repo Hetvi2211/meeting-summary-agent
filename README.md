@@ -22,6 +22,7 @@ The generated summary is saved to a text file and stored in a SQLite database fo
 * Owner Identification
 * Save Summary to Text File
 * Save Summary to SQLite Database
+* View Summary History
 * Custom Agent Implementation (No Workflow Tools)
 
 ---
@@ -92,6 +93,38 @@ The meeting focused on the upcoming dashboard launch scheduled for next week. Ba
 
 ---
 
+## Day 20 Capstone Feature
+
+### Feature: Summary History
+
+Users can now access previously generated meeting summaries through a dedicated History page.
+
+### User Flow
+
+Generate Summary
+↓
+Save to SQLite Database
+↓
+Click History Button
+↓
+View Previously Generated Summaries
+
+### Implementation
+
+- Added database retrieval functionality
+- Created `/history` route
+- Added History page UI
+- Display summaries in reverse chronological order
+- Integrated with existing SQLite database
+
+### Benefits
+
+- Quick access to previous meeting summaries
+- Improved user experience
+- Persistent storage of generated outputs
+
+---
+
 ## Screenshots
 
 ### Meeting agent
@@ -117,6 +150,14 @@ The meeting focused on the upcoming dashboard launch scheduled for next week. Ba
 ### Github Actions Success
 
 ![Github Actions Success](screenshots/github-actions-success.png)
+
+### History 
+
+![History Button](screenshots/history.png)
+
+### Capstone Scope
+
+![Capstone Scope](screenshots/capstone_scope.png)
 
 ---
 
